@@ -26,3 +26,17 @@
 9. Agregar un nuevo elemento a la carpeta components para crear un componente para cada articulo capturado, solicitara las props para el nombre del articulo (capturado desde el arreglo de capturas) y la función _handleDelete_ para eliminar el articulo al presionar un boton que lo acompaña en el componente propio.
 10. Importar el archivo en el componente padre (App.jsx) e incorporarlo a la estructura del componente utilizando el método .map sobre el arreglo de capturas para mostrar a cada componente hijo
 11. Implementar estelizados desde el archivo App.css
+## PRCT 03 useEffect y useMemo (V3.0)
+### Pasos para instalar ESLint
+1. Desde la terminal, direccionarse a la carpeta del proyecto actual e instalar neostandard con la instrucción _*npm install -D neostandard*_
+2. En VSC, dirigirse al archivo _elint.config.js_ e importar neostandar con la instrucción _*import { neostandard } from 'neostandard/lib/main'*_
+3. En ese archivo, en la primera linea de código después de _export default defineConfig([_ agregar la instrucción _*...neostandard(),*_
+### Aplicación de Contador de Tareas con Cromnometro de Ejecución
+1. Se crea un proyecto en vite + react, y se despeja la plantilla prestablecida
+2. Se importan los hooks de useState useEffect useMemo
+3. Se crean los estados para el input nombre de tarea, duración de tarea y un arreglo interno para capturar cada una, todas con useState
+4. Se implementaron las funciones "calcularTiempoTotal" con useMemo y agregarTarea con función flecha adaptado para un form al recibir el nombre y la duración de la tarea
+5. Se creo la función ejecutarTarea con función flecha y recursividad para cronometrar los segundos, se uso map para capturar el arreglo con la modificación sobre el tiempo que vaya transcurriendo y asentarlo en el arreglo con setTareas
+6. Se creo una función para borrar la tarea
+7. Se creo un archivo .jsx para tratar a cada etiqueta <_*li*_> como componente e integrarle las funciones de ejecutarTarea y eliminarTarea con el evento onClick en un boton propio para cada uno
+8. Finalmente se implemento la función useEffect para realizar cambios sobre el titulo de la pestaña de la página, esta misma tiene como dependencias a la funcion useMemo y el arreglo tareas para que logre ejecutarse adecuadamente
